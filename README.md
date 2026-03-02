@@ -24,7 +24,10 @@ Designed to be simple, self-contained, and easy to deploy.
 ## Project Structure
 ```
 .
-├── upload.go        # Main secure upload server
+├── assets
+│   ├── favicon.ico
+│   └── favicon.svg
+├── main.go        # Main secure upload server
 ├── usertool.go      # CLI tool to manage users
 ├── users.txt        # User database (created automatically)
 ├── go.mod
@@ -33,7 +36,7 @@ Designed to be simple, self-contained, and easy to deploy.
 ```
 
 ## Requirements
-- Go 1.20+ (modules required)
+- Go 1.24+ (modules required)
 Check your version:
 ```
 go version
@@ -47,7 +50,7 @@ go get golang.org/x/crypto/bcrypt
 ```
 2. Build
 ```
-go build upload.go
+go build main.go
 go build usertool.go
 ```
 
